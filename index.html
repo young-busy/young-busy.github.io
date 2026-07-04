@@ -14,10 +14,20 @@
   }
 </style>
 <body>
-  欢迎您通过写邮件给 youngbusysov@163.com 来投稿，您可以署名或者匿名发表，也可以选择是否显示时间
+  欢迎您通过写邮件给 youngbusysov@163.com 来投稿，您可以署名或者匿名发表，也可以选择是否显示时间<button onclick="copyText()">一键复制邮箱地址</button>
   <header>
     <p style='color:#fff;text-shadow:0 0 20px white;font-size: 24px;font-family: "微软雅黑";'>学生会会长的博客</p>
   </header>
   <h3 style="color:#1561af;text-align:center;">你可以通过点击下列按钮中的一个来查看其对应的博客</h1>
   注：这里空空如也，不是网页故障了，是还没人发表文章。。。
 </body>
+<script>
+  function copyText() {
+    const text = "youngbusysov@163.com";
+    navigator.clipboard.writeText(text).then(() => {
+        alert('复制成功！');
+    }).catch(err => {
+        console.error('复制失败:', err);
+    });
+}
+</script>
